@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+    
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Новости туризма</h1>
+      <div class="search">
+        <form class="search-form" action="/" method="get">
+          <button class="search-form__button" type="submit">
+            <span class="search-form__icon">
+              <svg
+              class="search-form__img"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Left icon">
+                <circle
+                  id="Ellipse 24"
+                  cx="11"
+                  cy="11"
+                  r="5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  id="Vector 141"
+                  d="M15 15L19 19"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </g>
+            </svg>
+            </span>
+          </button>
+          <input class="search-form__input" placeholder="Поиск новостей" />
+        </form>
+        <div class="search__tabs">
+          <div class="search__tab search__tab--active" id="search-tab-1">
+            Новоти РСТ
+          </div>
+          <div class="search__tab" id="search-tab-2">Новости туризма</div>
+          <div class="search__tab" id="search-tab-3">Мероприятия</div>
+          <div class="search__tab" id="search-tab-4">Видеоновости</div>
+        </div>
+      </div>
+
+      <div class="pinned-news">
+        <!-- # -->
+        <a
+          href="/"
+          class="preview-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="preview-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="preview-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="preview-news__text">
+            <time
+              datetime="2024-09-02"
+              class="preview-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            >
+            <p class="preview-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <meta content="Аннотация новости" itemprop="articleBody" />
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+            <img
+              loading="lazy"
+              src="./img/arrow.svg"
+              alt="Avatar"
+              class="preview-news__icon"
+            />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="preview-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="preview-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="preview-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="preview-news__text">
+            <time
+              datetime="2024-09-02"
+              class="preview-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            >
+            <p class="preview-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <meta content="Аннотация новости" itemprop="articleBody" />
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+            <img
+              loading="lazy"
+              src="./img/arrow.svg"
+              alt="Avatar"
+              class="preview-news__icon"
+            />
+          </div>
+        </a>
+        <!-- # -->
+      </div>
+      <!-- /\ -->
+      <!-- \/ -->
+      <div class="feed">
+        <!-- # -->
+        <a
+          href="/"
+          class="feed-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="feed-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="feed-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="feed-news__text">
+            <div class="feed-news__meta">
+            <p class="feed-news__rubric">#НовостиРСТ</p>
+            <time
+              datetime="2024-09-02"
+              class="feed-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            ></div>
+            <p class="feed-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <p class="feed-news__description" itemprop="articleBody">
+              Оспа обезьян вряд ли приведет к ограничениям передвижения между
+              странами подобным тем, которые были введены во время пандемии
+              коронавируса, считают Российском союзе туриндустрии (РСТ). По
+              мнению экспертов, это заболевание не настолько заразное и многие
+              имеют к нему иммунитет.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="feed-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="feed-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="feed-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="feed-news__text">
+            <div class="feed-news__meta">
+            <p class="feed-news__rubric">#НовостиРСТ</p>
+            <time
+              datetime="2024-09-02"
+              class="feed-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            ></div>
+            <p class="feed-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <p class="feed-news__description" itemprop="articleBody">
+              Оспа обезьян вряд ли приведет к ограничениям передвижения между
+              странами подобным тем, которые были введены во время пандемии
+              коронавируса, считают Российском союзе туриндустрии (РСТ). По
+              мнению экспертов, это заболевание не настолько заразное и многие
+              имеют к нему иммунитет.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="feed-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="feed-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="feed-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="feed-news__text">
+            <div class="feed-news__meta">
+            <p class="feed-news__rubric">#НовостиРСТ</p>
+            <time
+              datetime="2024-09-02"
+              class="feed-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            ></div>
+            <p class="feed-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <p class="feed-news__description" itemprop="articleBody">
+              Оспа обезьян вряд ли приведет к ограничениям передвижения между
+              странами подобным тем, которые были введены во время пандемии
+              коронавируса, считают Российском союзе туриндустрии (РСТ). По
+              мнению экспертов, это заболевание не настолько заразное и многие
+              имеют к нему иммунитет.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="feed-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="feed-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="feed-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="feed-news__text">
+            <div class="feed-news__meta">
+            <p class="feed-news__rubric">#НовостиРСТ</p>
+            <time
+              datetime="2024-09-02"
+              class="feed-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            ></div>
+            <p class="feed-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <p class="feed-news__description" itemprop="articleBody">
+              Оспа обезьян вряд ли приведет к ограничениям передвижения между
+              странами подобным тем, которые были введены во время пандемии
+              коронавируса, считают Российском союзе туриндустрии (РСТ). По
+              мнению экспертов, это заболевание не настолько заразное и многие
+              имеют к нему иммунитет.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="feed-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="feed-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="feed-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="feed-news__text">
+            <div class="feed-news__meta">
+            <p class="feed-news__rubric">#НовостиРСТ</p>
+            <time
+              datetime="2024-09-02"
+              class="feed-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            ></div>
+            <p class="feed-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <p class="feed-news__description" itemprop="articleBody">
+              Оспа обезьян вряд ли приведет к ограничениям передвижения между
+              странами подобным тем, которые были введены во время пандемии
+              коронавируса, считают Российском союзе туриндустрии (РСТ). По
+              мнению экспертов, это заболевание не настолько заразное и многие
+              имеют к нему иммунитет.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="feed-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div
+            class="feed-news__image"
+            itemscope=""
+            itemtype="https://schema.org/ImageObject"
+          >
+            <img
+              src="./.ex-img/rst-news-02-09-24-3.jpg"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="feed-news__image-img"
+              itemprop="contentUrl"
+            />
+            <meta
+              content="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              itemprop="name"
+            />
+            <meta content="Аннотация новости" itemprop="description" />
+            <meta itemprop="width" content="2000" />
+          </div>
+          <div class="feed-news__text">
+            <div class="feed-news__meta">
+            <p class="feed-news__rubric">#НовостиРСТ</p>
+            <time
+              datetime="2024-09-02"
+              class="feed-news__date"
+              itemprop="datePublished"
+              >02.09.2024</time
+            ></div>
+            <p class="feed-news__title h2" itemprop="headline">
+              Эксперты РСТ не прогнозируют серьезной угрозы международному
+              туризму от оспы обезьян
+            </p>
+            <p class="feed-news__description" itemprop="articleBody">
+              Оспа обезьян вряд ли приведет к ограничениям передвижения между
+              странами подобным тем, которые были введены во время пандемии
+              коронавируса, считают Российском союзе туриндустрии (РСТ). По
+              мнению экспертов, это заболевание не настолько заразное и многие
+              имеют к нему иммунитет.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- # -->
+      </div>
+      <!-- /\ -->
+      <!-- \/ -->
+      <section class="archive">
+        <h2 class="archive__title">Архив новостей</h2>
+        <!-- # -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="archive-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="archive-news__text">
+            <div class="archive-news__meta">
+              <p class="archive-news__rubric">#НовостиРСТ</p>
+              <time
+                datetime="2024-09-02"
+                class="archive-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="archive-news__title h2" itemprop="headline">
+              РСТ: у туроператоров растет спрос на санатории и экскурсионные
+              туры в Белоруссии
+            </p>
+            <p class="archive-news__description" itemprop="articleBody">
+              Туроператоры по Белоруссии отмечают значительный прирост объемов
+              по направлению, причем не только в летний период, но и на осенние
+              даты. В республике открылись новые привлекательные объекты показа,
+              которые туркомпании охотно включают в свои программы. Росту спроса
+              способствует также транспортная доступность республики.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- # -->
+      </section>
+      <!-- /\ -->
+      <!-- \/ -->
+      <div class="video-news">
+        <!-- # -->
+        <h2 class="video-news__header">Видео новости</h2>
+        <section class="video-news__container">
+          <div class="video-news__item">
+            <div class="video-news__video video">
+              <a class="video__link" href="https://youtu.be/0VrbFj7oHhU">
+                <picture>
+                  <source
+                    srcset="
+                      https://i.ytimg.com/vi_webp/0VrbFj7oHhU/maxresdefault.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    class="video__media"
+                    src="https://i.ytimg.com/vi/0VrbFj7oHhU/maxresdefault.jpg"
+                    alt="1. Пилот, разборы, ответы и лайвы"
+                  />
+                </picture>
+              </a>
+              <button class="video__button" aria-label="Запустить видео">
+                <svg
+                  width="34"
+                  height="40"
+                  viewBox="0 0 34 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="video__button-shape"
+                    d="M34 20L-1.74846e-06 40L0 -1.48619e-06L34 20Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="video-news__text">
+              <p class="video-news__title h2" itemprop="headline">
+                Видеоотчет о VI Всероссийском конгрессе турагентов РСТ
+              </p>
+              <time
+                datetime="2024-09-02"
+                class="video-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+              <meta content="Пресс-служба РСТ" itemprop="author" />
+            </div>
+          </div>
+          <!-- === -->
+          <div class="video-news__item">
+            <div class="video-news__video video">
+              <a class="video__link" href="https://youtu.be/0VrbFj7oHhU">
+                <picture>
+                  <source
+                    srcset="
+                      https://i.ytimg.com/vi_webp/0VrbFj7oHhU/maxresdefault.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    class="video__media"
+                    src="https://i.ytimg.com/vi/0VrbFj7oHhU/maxresdefault.jpg"
+                    alt="1. Пилот, разборы, ответы и лайвы"
+                  />
+                </picture>
+              </a>
+              <button class="video__button" aria-label="Запустить видео">
+                <svg
+                  width="34"
+                  height="40"
+                  viewBox="0 0 34 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="video__button-shape"
+                    d="M34 20L-1.74846e-06 40L0 -1.48619e-06L34 20Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="video-news__text">
+              <p class="video-news__title h2" itemprop="headline">
+                Видеоотчет о VI Всероссийском конгрессе турагентов РСТ
+              </p>
+              <time
+                datetime="2024-09-02"
+                class="video-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+              <meta content="Пресс-служба РСТ" itemprop="author" />
+            </div>
+          </div>
+
+          <!-- === -->
+          <div class="video-news__item">
+            <div class="video-news__video video">
+              <a class="video__link" href="https://youtu.be/0VrbFj7oHhU">
+                <picture>
+                  <source
+                    srcset="
+                      https://i.ytimg.com/vi_webp/0VrbFj7oHhU/maxresdefault.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    class="video__media"
+                    src="https://i.ytimg.com/vi/0VrbFj7oHhU/maxresdefault.jpg"
+                    alt="1. Пилот, разборы, ответы и лайвы"
+                  />
+                </picture>
+              </a>
+              <button class="video__button" aria-label="Запустить видео">
+                <svg
+                  width="34"
+                  height="40"
+                  viewBox="0 0 34 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="video__button-shape"
+                    d="M34 20L-1.74846e-06 40L0 -1.48619e-06L34 20Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="video-news__text">
+              <p class="video-news__title h2" itemprop="headline">
+                Видеоотчет о VI Всероссийском конгрессе турагентов РСТ
+              </p>
+              <time
+                datetime="2024-09-02"
+                class="video-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+              <meta content="Пресс-служба РСТ" itemprop="author" />
+            </div>
+          </div>
+
+          <!-- === -->
+          <div class="video-news__item">
+            <div class="video-news__video video">
+              <a class="video__link" href="https://youtu.be/0VrbFj7oHhU">
+                <picture>
+                  <source
+                    srcset="
+                      https://i.ytimg.com/vi_webp/0VrbFj7oHhU/maxresdefault.webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    class="video__media"
+                    src="https://i.ytimg.com/vi/0VrbFj7oHhU/maxresdefault.jpg"
+                    alt="1. Пилот, разборы, ответы и лайвы"
+                  />
+                </picture>
+              </a>
+              <button class="video__button" aria-label="Запустить видео">
+                <svg
+                  width="34"
+                  height="40"
+                  viewBox="0 0 34 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="video__button-shape"
+                    d="M34 20L-1.74846e-06 40L0 -1.48619e-06L34 20Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="video-news__text">
+              <p class="video-news__title h2" itemprop="headline">
+                Видеоотчет о VI Всероссийском конгрессе турагентов РСТ
+              </p>
+              <time
+                datetime="2024-09-02"
+                class="video-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+              <meta content="Пресс-служба РСТ" itemprop="author" />
+            </div>
+          </div>
+          <a href="#" class="video-news__button button-primary">
+            <span> Больше видео </span>
+          </a>
+        </section>
+
+        <!-- # -->
+      </div>
+      <!-- /\ -->
+      <!-- \/ -->
+      <section class="event">
+        <h2 class="event__title">Мероприятия</h2>
+        <!-- # -->
+
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- === -->
+        <a
+          href="/"
+          class="event-news"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <div class="event-news__text">
+            <div class="event-news__meta">
+              <p class="event-news__rubric">#Мероприятия</p>
+              <time
+                datetime="2024-09-02"
+                class="event-news__date"
+                itemprop="datePublished"
+                >03.09.2024</time
+              >
+            </div>
+            <p class="event-news__title h2" itemprop="headline">
+              8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+              театре МДМ
+            </p>
+            <p class="event-news__description" itemprop="articleBody">
+              «МАММА МИМО! или Мюзикл пошёл не так» - пародии на суперхиты и
+              юмор через край в комедийном шоу.
+            </p>
+            <meta content="Пресс-служба РСТ" itemprop="author" />
+          </div>
+        </a>
+        <!-- # -->
+      </section>
+      <!-- /\ -->
+      <!-- \/ -->
+      <div class="uslugi">
+        <!-- # -->
+        <a href="/" class="uslugi-item">
+          <div class="uslugi-item__text">
+            <p class="uslugi-item__title h2">
+              Подключение к системе Электронная путевка
+            </p>
+            <p class="uslugi-item__description">
+              Государственная информационная система "Электронная путёвка" —
+              государственный информационный ресурс, ориентированный на защиту
+              прав туристов в сферах выездного, въездного и внутреннего туризма
+            </p>
+            <img
+              loading="lazy"
+              src="./img/arrow.svg"
+              alt="Avatar"
+              class="uslugi-item__icon"
+            />
+          </div>
+          <div class="uslugi-item__image">
+            <img
+              src="./.ex-img/01.png"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="uslugi-item__image-img"
+            />
+          </div>
+        </a>
+        <!-- === -->
+        <a href="/" class="uslugi-item">
+          <div class="uslugi-item__text">
+            <p class="uslugi-item__title h2">
+              Станьте частью Российского союза туриндустрии!
+            </p>
+            <p class="uslugi-item__description">
+              Основные задачи РСТ – создание в стране цивилизованного
+              туристического рынка, повышение конкурентоспособности
+              национального турпродукта и услуг в сфере туризма.
+            </p>
+            <img
+              loading="lazy"
+              src="./img/arrow.svg"
+              alt="Avatar"
+              class="uslugi-item__icon"
+            />
+          </div>
+          <div class="uslugi-item__image">
+            <img
+              src="./.ex-img/01.png"
+              alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+              class="uslugi-item__image-img"
+            />
+          </div>
+        </a>
+        <!-- # -->
+      </div>
+    </main>
+
+  </body>
+</html>

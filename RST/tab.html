@@ -1,0 +1,79 @@
+<form class="search-form">
+  <div class="group">
+    <input type="tel" name="phone" class="tel" inputmode="tel" required="" />
+    <label>Поиск</label>
+  </div>
+  <button
+    type="submit"
+    class="button-modal"
+    name="submit"
+    value="Обратиться"
+    onclick=""
+  >
+  <span>
+    Поиск
+  </span>
+</button>
+</form>
+
+<style>
+  :root {
+    --color-1: #444;
+    --color-2: #afeeee;
+    --color-3: #673ab7;
+    --color-4: #fff;
+    --color-5: whitesmoke;
+    --color-6: #f3f6fe;
+    --color-7: #dedede;
+    --color-8: #f6f6f6;
+    --text-shadow: 0 2px 3px rgba(0, 4, 0, 0.2);
+    --border-radius: 0.3rem;
+    --animation-speed: 600ms;
+    --text-size: 16px;
+    --primary-Minfont-size: 1.5vw;
+    --primary-Maxfont-size: 1;
+    --MaxScreenSizePX: 1080;
+    --primary-font-bold: 'Montserrat Alternates', sans-serif;
+    --primary-font: 'Montserrat Alternates', sans-serif;
+  }
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form .group {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .search-form input {
+    padding: var(--text-size);
+    display: block;
+    border: none;
+    border-bottom: 1px solid var(--color-3);
+  }
+
+  .search-form label {
+    color: var(--color-1);
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 15px;
+    transition: var(--animation-speed) ease all;
+  }
+
+  .search-form input:focus ~ label,
+  .search-form input:valid ~ label {
+    top: -15px;
+    font-size: var(--text-size);
+    color: var(--color-2);
+  }
+
+  .search-form input:focus{
+    outline: none;
+    border-bottom: 1px solid var(--color-2);
+    transition: width calc(var(--animation-speed) / 3);
+  }
+</style>

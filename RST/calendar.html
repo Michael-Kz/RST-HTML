@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Unbounded:wght@200..900&display=swap"
+    rel="stylesheet" />
+  <script src="./js/wow.min.js"></script>
+  <script>
+    new WOW().init()
+  </script>
+  <script src="./js/scroll.js"></script>
+  <style>
+    .calendar__event {}
+
+    .calendar__event-list {}
+
+    .event-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .calendar__title {
+      font-family: 'Unbounded';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 31px;
+      line-height: 52px;
+      color: #393f42;
+      text-align: center;
+    }
+
+    .calendar__tabs {
+      display: flex;
+      gap: 0.42vw;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1.77vw 0 1.15vw 0;
+    }
+
+    .calendar__tab {
+      border-radius: 22px;
+      color: var(--color-10);
+      padding: 6px 8px;
+      font-size: 13px;
+      width: max-content;
+      border: 1px solid var(--color-232);
+      cursor: pointer;
+      font-family: 'Lato';
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 20px;
+      color: #393f42;
+    }
+
+    .calendar__tab--active,
+    .calendar__tab:hover {
+      background-color: var(--color-9);
+    }
+
+    .event-list__item {
+      height: 366px;
+      --background-color-default: #ffffff;
+      background: var(--background-color-active, --background-color-default);
+      border: 1px solid #d9d9d9;
+      border-radius: 32px;
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      flex: 0 0 18%;
+      /* gap: 22vh; */
+      transition: all 0.7s ease;
+      /* justify-content: space-between; */
+      margin: 0 12px;
+    }
+
+    .event-list__time {
+      --border-color-default: #393f42;
+      border-bottom: 1px solid var(--border-color-active, var(--border-color-default));
+      padding-bottom: 0.73vw;
+      display: flex;
+      gap: 0.26vw;
+      flex-direction: row;
+      align-items: baseline;
+      margin-bottom: 25vh;
+    }
+
+    .event-list__date {
+      --text-color-default: #393f42;
+      color: var(--text-color-active, --text-color-default);
+      font: 400 clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem) / 2 var(--font-headings);
+    }
+
+    .event-list__mount {
+      --text-color-default: #393f42;
+      color: var(--text-color-active, --text-color-default);
+      font: 400 clamp(0.625rem, 0.6rem + 0.13vw, 0.75rem) / 2 var(--font-headings);
+    }
+
+    .event-list__title {
+      --text-color-default: #5e5e62;
+      color: var(--text-color-active, --text-color-default);
+      font: 400 clamp(0.813rem, 0.787rem + 0.13vw, 0.938rem) / 1.15 var(--font-headings);
+    }
+
+    .event-list__item:hover {
+      --border-color-active: #ffffff;
+      --text-color-active: #ffffff;
+      --background-color-active: #6f8db5;
+    }
+
+    svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    :root {
+      --accent: #6f8db5;
+      --accent-hover: #6f8db5;
+      --accent-active: #6f8db5;
+      --control: #163300;
+      --scrollbar-thumb: #c6cdc1;
+      --secondary: #ecefeb;
+      --secondary-hover: #e0e4de;
+      --secondary-active: #6c6c6b;
+      --content-primary: #0e0f0c;
+    }
+
+    .calendar__mounth {}
+
+    .calendar__container {
+      width: 100%;
+      display: flex;
+      height: max-content;
+      align-items: center;
+      position: relative;
+      margin-bottom: 3.28vw;
+    }
+
+    #months {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    .month {
+      appearance: none;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      scroll-snap-align: start;
+      --background-color-default: #ffffff;
+      background: var(--background-color-active, --background-color-default);
+      font: 400 clamp(1.063rem, 0.975rem + 0.44vw, 1.5rem) / 2 var(--font-headings);
+      border: 1px solid #e9eaf5;
+      border-radius: 32px;
+      text-align: center;
+      line-height: 52px;
+      color: #393f42;
+      display: flex;
+      flex: 0 0 18%;
+      margin: 0 12px;
+    }
+
+
+    .action-button--horizontal-scroll {
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      padding: 8px;
+      position: absolute;
+      z-index: 5;
+      opacity: 0;
+      transition: all 0.7s ease-in-out;
+      border: 1px solid var(--color-232);
+      background: transparent;
+    }
+
+    @media screen and (max-width: 991px) {
+      .action-button--horizontal-scroll {
+        display: none;
+      }
+
+      .event-list__item {
+
+        flex: 0 0 48%;
+        margin: 0;
+
+      }
+
+      .event-list {
+
+        gap: 12px;
+
+        justify-content: flex-start;
+      }
+    }
+
+    .action-button--horizontal-scroll:active {}
+
+    .action-button--horizontal-scroll:disabled {
+      background: var(--secondary);
+      opacity: 0 !important;
+    }
+
+    .action-button--horizontal-scroll:disabled :active {
+      background: var(--secondary);
+    }
+
+    #action-button--previous {
+      left: 0;
+    }
+
+    #action-button--next {
+      right: 0;
+    }
+
+    .action-button__icon {
+      width: 24px;
+      height: 24px;
+      color: var(--color-232);
+    }
+
+    .calendar__mounth:hover .action-button--horizontal-scroll {
+      opacity: 1;
+      transition: all 0.7s ease-in-out;
+      color: #ffffff;
+    }
+
+    .action-button--horizontal-scroll:hover {
+      background: var(--accent-hover);
+    }
+
+    .month:hover {
+      --background-color-active: #e9eaf5;
+    }
+
+    .action-button--horizontal-scroll:hover .action-button__icon {
+      color: #ffffff;
+    }
+
+    .action-button--horizontal-scroll:disabled :hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="calendar">
+      <h1 class="calendar__title">Календарь мероприятий РСТ</h1>
+      <div class="calendar__tabs">
+        <div class="calendar__tab calendar__tab--active">Все</div>
+        <div class="calendar__tab">2023</div>
+        <div class="calendar__tab">2024</div>
+      </div>
+      <div class="calendar__mounth">
+        <div class="calendar__container">
+          <button type="button" disabled id="action-button--previous"
+            class="action-button--horizontal-scroll">
+            <svg class="action-button__icon" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                d="M15.7071 5.29289C15.3166 4.90237 14.6834 4.90237 14.2929 5.29289L8.29289 11.2929C7.90237 11.6834 7.90237 12.3166 8.29289 12.7071L14.2929 18.7071C14.6834 19.0976 15.3166 19.0976 15.7071 18.7071C16.0976 18.3166 16.0976 17.6834 15.7071 17.2929L10.4142 12L15.7071 6.70711C16.0976 6.31658 16.0976 5.68342 15.7071 5.29289Z"
+                fill="white" />
+            </svg>
+          </button>
+          <div id="months">
+            <a class="month">Январь</a> <a class="month">Февраль</a>
+            <a class="month">Март</a> <a class="month">Апрель</a>
+            <a class="month">Май</a> <a class="month">Июнь</a>
+            <a class="month">Июль</a> <a class="month">Август</a>
+            <a class="month">Сентябрь</a> <a class="month">Октябрь</a>
+            <a class="month">Ноябрь</a> <a class="month">Декабрь</a>
+          </div>
+          <button type="button" id="action-button--next"
+            class="action-button--horizontal-scroll">
+            <svg class="action-button__icon" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289Z"
+                fill="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="calendar__event-list event-list">
+        <a href="#" target="blank" class="event-list__item">
+          <time datetime="" class="event-list__time">
+            <b class="event-list__date">15-16</b>
+            <div class="event-list__mount">марта</div>
+          </time>
+          <p class="event-list__title">VI Конгресс турагентов</p>
+        </a>
+        <a href="#" target="blank" class="event-list__item">
+          <time datetime="" class="event-list__time">
+            <b class="event-list__date">15-16</b>
+            <div class="event-list__mount">марта</div>
+          </time>
+          <p class="event-list__title">VI Конгресс турагентов</p>
+        </a>
+        <a href="#" target="blank" class="event-list__item">
+          <time datetime="" class="event-list__time">
+            <b class="event-list__date">15-16</b>
+            <div class="event-list__mount">марта</div>
+          </time>
+          <p class="event-list__title">
+            8 сентября приглашаем членов РСТ разделить с нами вечер юмора в
+            театре МДМ
+          </p>
+        </a>
+        <a href="#" target="blank" class="event-list__item">
+          <time datetime="" class="event-list__time">
+            <b class="event-list__date">15-16</b>
+            <div class="event-list__mount">марта</div>
+          </time>
+          <p class="event-list__title">VI Конгресс турагентов</p>
+        </a>
+        <a href="#" target="blank" class="event-list__item">
+          <time datetime="" class="event-list__time">
+            <b class="event-list__date">15-16</b>
+            <div class="event-list__mount">марта</div>
+          </time>
+          <p class="event-list__title">VI Конгресс турагентов</p>
+        </a>
+      </div>
+    </section>
+    <div class="uslugi">
+      <!-- # -->
+      <a href="/" class="uslugi-item">
+        <div class="uslugi-item__text">
+          <p class="uslugi-item__title h2">
+            Подключение к системе Электронная путевка
+          </p>
+          <p class="uslugi-item__description">
+            Государственная информационная система "Электронная путёвка" —
+            государственный информационный ресурс, ориентированный на защиту
+            прав туристов в сферах выездного, въездного и внутреннего туризма
+          </p>
+          <img loading="lazy" src="./img/arrow.svg" alt="Avatar"
+            class="uslugi-item__icon" />
+        </div>
+        <div class="uslugi-item__image">
+          <img src="./.ex-img/01.png"
+            alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+            class="uslugi-item__image-img" />
+        </div>
+      </a>
+      <!-- === -->
+      <a href="/" class="uslugi-item">
+        <div class="uslugi-item__text">
+          <p class="uslugi-item__title h2">
+            Станьте частью Российского союза туриндустрии!
+          </p>
+          <p class="uslugi-item__description">
+            Основные задачи РСТ – создание в стране цивилизованного
+            туристического рынка, повышение конкурентоспособности
+            национального турпродукта и услуг в сфере туризма.
+          </p>
+          <img loading="lazy" src="./img/arrow.svg" alt="Avatar"
+            class="uslugi-item__icon" />
+        </div>
+        <div class="uslugi-item__image">
+          <img src="./.ex-img/01.png"
+            alt="Эксперты РСТ не прогнозируют серьезной угрозы международному туризму от оспы обезьян"
+            class="uslugi-item__image-img" />
+        </div>
+      </a>
+      <!-- # -->
+    </div>
+  </main>
+  <script src="./js/script.js"></script>
+  <script>
+    const monthsScrolling = document.getElementById('months')
+    let isDown = false
+    let startX
+    let startY
+    let scrollLeft
+    let scrollTop
+
+    monthsScrolling.addEventListener('mousedown', e => {
+      isDown = true
+      startX = e.pageX - monthsScrolling.offsetLeft
+      startY = e.pageY - monthsScrolling.offsetTop
+      scrollLeft = monthsScrolling.scrollLeft
+      scrollTop = monthsScrolling.scrollTop
+      monthsScrolling.style.cursor = 'grabbing'
+    })
+
+    monthsScrolling.addEventListener('mouseleave', () => {
+      isDown = false
+      monthsScrolling.style.cursor = 'grab'
+    })
+
+    monthsScrolling.addEventListener('mouseup', () => {
+      isDown = false
+      monthsScrolling.style.cursor = 'grab'
+    })
+
+    document.addEventListener('mousemove', e => {
+      if (!isDown) return
+      e.preventDefault()
+      const x = e.pageX - monthsScrolling.offsetLeft
+      const y = e.pageY - monthsScrolling.offsetTop
+      const walkX = (x - startX) * 1
+      const walkY = (y - startY) * 1
+      monthsScrolling.scrollLeft = scrollLeft - walkX
+      monthsScrolling.scrollTop = scrollTop - walkY
+    })
+
+    const scrollLeftButton = document.getElementById(
+      'action-button--previous'
+    )
+    const scrollRightButton = document.getElementById('action-button--next')
+    const scrollAmount = monthsScrolling.clientWidth * 0.72 + 96
+
+    scrollLeftButton.addEventListener('click', () => {
+      monthsScrolling.scrollBy({
+        top: 0,
+        left: -scrollAmount,
+        behavior: 'smooth'
+      })
+    })
+
+    scrollRightButton.addEventListener('click', () => {
+      monthsScrolling.scrollBy({
+        top: 0,
+        left: scrollAmount,
+        behavior: 'smooth'
+      })
+    })
+
+    monthsScrolling.addEventListener('scroll', e => {
+      const position = monthsScrolling.scrollLeft
+      scrollLeftButton.disabled = position === 0
+      scrollRightButton.disabled =
+        Math.round(position) ===
+        monthsScrolling.scrollWidth - monthsScrolling.clientWidth
+    })
+  </script>
+</body>
+
+</html>

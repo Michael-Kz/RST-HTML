@@ -1,0 +1,97 @@
+ @charset "UTF-8";
+ @layer base, layout, components, effects, slider;
+ @layer slider{
+ .rst-slider {
+    position: relative;
+  }
+  
+  .rst-slider__wrapper {
+    overflow: hidden;
+  }
+  
+  .rst-slider__items {
+    display: flex;
+    transition: transform var(--animation-speed) var(--transition-timing-function);
+    will-change: transform;
+  }
+  
+  .rst-slider__transition-none {
+    transition: none;
+  }
+  
+  .rst-slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    user-select: none;
+    will-change: transform;
+  }
+  
+  /* кнопки влево и вправо */
+  .rst-slider__btn {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.08vw;
+    height: 2.60vw;
+    color: #ffffff;
+    text-align: center;
+    background: rgb(0 0 0 / 20%);
+    border: none;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .rst-slider__btn_hide {
+    display: none;
+  }
+  
+  .rst-slider__btn_prev {
+    left: 0;
+
+  }
+  
+  .rst-slider__btn_next {
+    right: 0;
+
+  }
+  
+  .rst-slider__btn:hover,
+  .rst-slider__btn:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background: rgb(0 0 0 / 30%);
+    outline: 0;
+  }
+  
+  .rst-slider__btn::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  
+  .rst-slider__btn_prev::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+  
+  .rst-slider__btn_next::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+  
+
+
+  .rst-slider__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    padding: 0 1vw;
+    align-items: flex-start;
+    background: unset;
+    height: 100%;
+  }
+
+}

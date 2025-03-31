@@ -1,0 +1,11 @@
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ваш сайт",
+    "url": "https://www.example.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.example.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }

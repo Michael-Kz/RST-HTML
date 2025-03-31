@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form class="search-form" action="/" method="get">
+      <button class="search-form__button" type="submit">
+        <span class="search-form__icon">
+          <img
+            src="./img/search.svg"
+            alt="Поиск новостей"
+            class="search-form__img"
+          />
+        </span>
+      </button>
+        <input class="search-form__input" required />
+    </form>
+
+    <style>
+      :root {
+        --color-1: #444;
+        --color-2: #afeeee;
+        --color-3: #673ab7;
+        --color-4: #fff;
+        --color-5: whitesmoke;
+        --color-6: #f3f6fe;
+        --color-7: #dedede;
+        --color-8: #f6f6f6;
+        --text-shadow: 0 2px 3px rgba(0, 4, 0, 0.2);
+        --border-radius: 0.3rem;
+        --animation-speed: 600ms;
+        --text-size: 16px;
+        --primary-Minfont-size: 1.5vw;
+        --primary-Maxfont-size: 1;
+        --MaxScreenSizePX: 1080;
+        --primary-font-bold: 'Montserrat Alternates', sans-serif;
+        --primary-font: 'Montserrat Alternates', sans-serif;
+      }
+
+      .search-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10vw;
+        position: relative;
+        width: 100%;
+      }
+
+
+
+      .search-form__input {
+        display: block;
+        border: none;
+        border-bottom: 1px solid #ababab;
+        font: 500 clamp(1.125rem, 1.075rem + 0.25vw, 1.375rem) / 2
+            var(--font-lato),
+          sans-serif;
+          padding: 0 0 0 3vw;
+          width: 100%;
+      }
+
+
+      .search-form__input:focus {
+        outline: none;
+        border-bottom: 1px solid #556da7;
+        transition: width var(--animation-speed) ease all;
+      }
+      .search-form__button {
+        color: #ababab;
+        position: absolute;
+        left: 0;
+        top: calc(15px - 0.3vw);
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+        background: none;
+        transition: width var(--animation-speed) ease all;
+      }
+
+      .search-form__icon {
+      }
+
+      .search-form__img {
+      }
+
+
+
+    </style>
+  </body>
+</html>
